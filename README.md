@@ -1,9 +1,9 @@
 # Current
 
 ## youtube-dl.rb
-This is a fork of the gem https://github.com/layer8x/youtube-dl.rb. That gem was stale and outdated so we modified it.
+This is a fork of the gem https://github.com/layer8x/youtube-dl.rb. Witch was a Ruby wrapper for [youtube-dl](http://rg3.github.io/youtube-dl/). That gem was stale and outdated so we modified it.
 
-`Changes from legacy gem.`
+### Changes from legacy gem.
 
 1. Replaced old binary with a new one from https://github.com/yt-dlp/yt-dlp
     * yt-dlp is a better more maintained and optimized version of youtube-dl. It is about 200x faster when pulling videos and has better options than the original software.
