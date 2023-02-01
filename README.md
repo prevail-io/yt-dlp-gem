@@ -1,16 +1,36 @@
+# Current
+
+## youtube-dl.rb
+This is a fork of the gem https://github.com/layer8x/youtube-dl.rb. That gem was stale and outdated so we modified it.
+
+`Changes from legacy gem.`
+
+1. Replaced old binary with a new one from https://github.com/yt-dlp/yt-dlp
+    * yt-dlp is a better more maintained and optimized version of youtube-dl. It is about 200x faster when pulling videos and has better options than the original software.
+    
+2. Modified the gem siginificantly to remove old code and no longer needed dependency gems.
+
+3. Updated the way you call the gem instead of calling the URL and then the options, just simply use the command you would like to run with yt-dlp. Please reference the yt-dlp github for exact documentation.
+    * Example code:
+    ```Ruby
+    YoutubeDL.download cmd: "--get-duration #{url}"
+    YoutubeDL.download cmd: "-f 251/250/249 -o - #{url}"
+    ```
+4. Overhauled existing gem to use native ruby methods and overall more understandable cleaner code. There is still some legacy code laying around sadly didn't have time to completely trim it down. As such I left the rest of the README intact for future reference if needed.
+
+.
+
+.
+
+.
+
+.
+
+.
+# Legacy
 # youtube-dl.rb
 
 Ruby wrapper for [youtube-dl](http://rg3.github.io/youtube-dl/).
-
-[![Build Status](https://travis-ci.org/layer8x/youtube-dl.rb.svg?branch=master)](https://travis-ci.org/layer8x/youtube-dl.rb)
-[![Code Climate](https://codeclimate.com/github/layer8x/youtube-dl.rb/badges/gpa.svg)](https://codeclimate.com/github/layer8x/youtube-dl.rb)
-[![Test Coverage](https://codeclimate.com/github/layer8x/youtube-dl.rb/badges/coverage.svg)](https://codeclimate.com/github/layer8x/youtube-dl.rb/coverage)
-[![security](https://hakiri.io/github/layer8x/youtube-dl.rb/master.svg)](https://hakiri.io/github/layer8x/youtube-dl.rb/master)
-[![Inline docs](http://inch-ci.org/github/layer8x/youtube-dl.rb.svg?branch=master)](http://inch-ci.org/github/layer8x/youtube-dl.rb)
-[![Dependency Status](https://gemnasium.com/layer8x/youtube-dl.rb.svg)](https://gemnasium.com/layer8x/youtube-dl.rb)
-
-[![Build history for master branch](https://buildstats.info/travisci/chart/layer8x/youtube-dl.rb?branch=master&buildCount=50)](https://travis-ci.org/layer8x/youtube-dl.rb/builds)
-[![Stories in Ready](https://badge.waffle.io/layer8x/youtube-dl.rb.svg?label=ready&title=Ready)](http://waffle.io/layer8x/youtube-dl.rb)
 
 ## Gem::InstallError: activesupport requires Ruby version >= 2.2.2.
 
